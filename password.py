@@ -18,7 +18,7 @@ def start():
     print("Введите необходимое количество паролей для генерации:")
     quantity = input()
     while quantity.isdigit() == False or int(quantity) == 0:
-        print("Введите пожалуйста ЦЕЛОЕ число, не равное нулю")
+        print("Введите пожалуйста ЦЕЛОЕ число, не равное нулю:")
         quantity = input()
     quantity = int(quantity)
     return number_password()
@@ -38,25 +38,25 @@ def number_password():
 def choice_settings():
     pass_len = 0
     chars = list()
-    print("Введите желаемую длину пароля")
+    print("Введите желаемую длину пароля:")
     pass_len = input()
-    while pass_len.isdigit() == False or int(pass_len) == 0:
-        print("Введите пожалуйста ЦЕЛОЕ число, не равное нулю")
+    while pass_len.isdigit() == False or int(pass_len) == 0 or int(pass_len) > 100:
+        print("Введите пожалуйста ЦЕЛОЕ число, не равное нулю, а также меньше 100:")
         pass_len = input()
     pass_len = int(pass_len)
     print("Выберите, использовать ли цифры?")
-    print("Напишите да или нет")
+    print("Напишите да или нет:")
     s_digit = input().lower()
     while s_digit != "да" and s_digit != "нет":
-        print("Напишите да или нет")
+        print("Напишите да или нет:")
         s_digit = input().lower()
     if s_digit == "да":
         chars.extend(digits)
     print("Хорошо, выберите использовать ли нижний регистр?")
-    print("Напишите да или нет")
+    print("Напишите да или нет:")
     lowercase = input().lower()
     while lowercase != "да" and lowercase != "нет":
-        print("Напишите да или нет")
+        print("Напишите да или нет:")
         lowercase = input().lower()
     if lowercase == "да":
         chars.extend(lowercase_letters)
@@ -64,7 +64,7 @@ def choice_settings():
     print("Выберите, использовать ли верхний регистр?")
     uppercase = input().lower()
     while uppercase != "да" and uppercase != "нет":
-        print("Напишите да или нет")
+        print("Напишите да или нет:")
         uppercase = input().lower()
     if uppercase == "да":
         chars.extend(uppercase_letters)
@@ -72,7 +72,7 @@ def choice_settings():
     print('Использовать ли символы "!#$%&*+-=?@^_." ?')
     s_punctuation = input().lower()
     while s_punctuation != "да" and s_punctuation != "нет":
-        print("Напишите да или нет")
+        print("Напишите да или нет:")
         s_punctuation = input().lower()
     if s_punctuation == "да":
         chars.extend(punctuation)
@@ -80,7 +80,7 @@ def choice_settings():
     print("Исключать ли неоднозначные символы?")
     s_ambigous = input().lower()
     while s_ambigous != "да" and s_ambigous != "нет":
-        print("Напишите да или нет")
+        print("Напишите да или нет:")
         s_ambigous = input().lower()
     if s_ambigous == "да":
         for i in range(len(ambigous)):
@@ -100,7 +100,7 @@ def again():
     s = input().lower()
     while s != "да":
         if s != "нет":
-            print("Напишите да или нет")
+            print("Напишите да или нет:")
             s = input().lower()
         else:
             print("Возвращайтесь еще")

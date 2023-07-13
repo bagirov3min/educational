@@ -17,34 +17,35 @@ def system():
         "или переводит числа в десятичную систему счисления",
     )
     print("Выберите систему счисления из которой хотите перевести число")
-    p = input()
+    p = input("Введите число: ")
     while p.isdigit() == False:
         print("Введено должно быть число от 1 до 16!")
-        p = input()
+        p = input("Введите число: ")
     p = int(p)
     if p != 10:
         print("Введенное число будет переведено в десятичную систему счисления")
-        print("Введите число")
         num = is_valid()
         return create_other()
     else:
         print("Выберите систему счисления в которую хотите перевести число")
-        s = input()
+        s = input("Введите число: ")
         while s.isdigit() == False:
             print("Введено должно быть число от 1 до 16!")
-            s = input()
+            s = input("Введите число: ")
         s = int(s)
-        print("Введите число")
-        num = input()
+        print(
+            "Теперь необходимо ввести целое число, для его перевода в выбранную вами систему счисления"
+        )
+        num = input("Введите число: ")
         while num.isdigit() == False:
             print("Необходимо ввести целое число!")
-            num = input()
+            num = input("Введите число: ")
         num = int(num)
         return create_decimal()
 
 
 def is_valid():
-    num = [i for i in input().upper() if i in lst]
+    num = [i for i in input("Введите число: ").upper() if i in lst]
     return num
 
 

@@ -6,18 +6,17 @@ total = ""
 # Создаем функцию для считывания и передачи введеного текста
 # Функция также проверяет язык текста
 def start(lan):
-    print("Введите слово")
-    s = input()
+    s = input("Введите слово:")
     if lan == 1:
         for i in range(len(s)):
-            if s[i] not in [chr(i) for i in range(ord("А"), ord("я"))]:
+            if s[i] not in [chr(i) for i in range(ord("А"), ord("я") + 1)]:
                 print("Необходимо ввести текст на русском языке!")
                 return start(1)
     else:
         for i in range(len(s)):
-            if s[i] not in [chr(i) for i in range(ord("A"), ord("Z"))] and s[i] not in [
-                chr(i) for i in range(ord("a"), ord("z"))
-            ]:
+            if s[i] not in [chr(i) for i in range(ord("A"), ord("Z") + 1)] and s[
+                i
+            ] not in [chr(i) for i in range(ord("a"), ord("z") + 1)]:
                 print("Необходимо ввести текст на английском языке!")
                 return start(2)
     return s
@@ -25,22 +24,20 @@ def start(lan):
 
 # Создаем функцию для считывания и передачи количества сдвигов
 def shift():
-    print("Введите количество сдвигов")
-    num = input()
+    num = input("Введите количество сдвигов: ")
     while num.isdigit() == False or num == 0:
         print("Количество должно быть ЦЕЛЫМ числом больше 0")
-        num = input()
+        num = input("Введите количество сдвигов: ")
     num = int(num)
     return num
 
 
 # Создаем функцию для считывания и передачи направления сдвига
 def turn_isvalid():
-    print("Введите направление сдвига")
-    turn = input().lower()
+    turn = input("Введите направление сдвига: ").lower()
     while turn != "право" and turn != "лево":
         print("Направление необходимо указать право или лево")
-        turn = input().lower()
+        turn = input("Введите направление сдвига: ").lower()
     if turn == "лево":
         turn = -1
     else:
@@ -61,13 +58,13 @@ def lang():
         "для текста, который необходимо зашифровать",
         sep="\n",
     )
-    language = input().lower()
+    language = input('Введите "1" или "2" с клавиатуры: ').lower()
     while language != "1" and language != "2":
         print("Необходимо правильно задать язык")
         print(
             'Напишите в ответe "1" - чтобый выбрать русский язык или "2" - чтобы выбрать английский язык'
         )
-        language = input().lower()
+        language = input('Введите "1" или "2" с клавиатуры: ').lower()
     if language == "1":
         return char_ru()
     else:
