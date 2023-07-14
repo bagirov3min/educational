@@ -1,28 +1,13 @@
 import pandas as pd
 import sqlite3
 
-# Чтение данных из файла XLSX
-df_author = pd.read_excel(
-    "C:/Users/",  # Укажите путь к файлу
-    sheet_name="Задание 1",
-    skiprows=1,  # Пропуск первой строки с заголовками
-    usecols="G:K",  # Выбор столбцов с G по K
-    nrows=7,  # Чтение первых 7 строк
-)
-df_book = pd.read_excel(
-    "C:/Users/",  # Укажите путь к файлу
-    sheet_name="Задание 1",
-    skiprows=9,  # Пропуск первых 9 строк
-    usecols="G:I",  # Выбор столбцов с G по I
-    nrows=7,  # Чтение первых 7 строк
-)
-df_edition = pd.read_excel(
-    "C:/Users/",  # Укажите путь к файлу
-    sheet_name="Задание 1",
-    skiprows=17,  # Пропуск первых 17 строк
-    usecols="G:K",  # Выбор столбцов с G по K
-    nrows=7,  # Чтение первых 7 строк
-)
+# URL ссылки на Google Sheets
+url = "https://docs.google.com/spreadsheets/d/1MT2L-W7ljYRZ7YfPOMwpPqoPv4T64koH7TVW_u5YMu0/export?format=csv&gid=1417323481"
+
+# Чтение данных из ссылки Google Sheets
+df_author = pd.read_csv(url, skiprows=1, usecols=[6, 7, 8, 9, 10], nrows=7)
+df_book = pd.read_csv(url, skiprows=9, usecols=[6, 7, 8], nrows=7)
+df_edition = pd.read_csv(url, skiprows=17, usecols=[6, 7, 8, 9, 10], nrows=7)
 
 # Преобразование формата данных столбца 'date_birth' в таблице 'df_author'
 df_author = df_author.rename(
