@@ -1,58 +1,41 @@
-# Создаем переменные
-
-s = 0
-p = 0
-num = 0
 lst = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
 
 
-# Создаем функцию приветсвия и выбора системы счисления
-# Возвращает одну из функций перевода числа в другую систему счисления
-def system():
-    global s
-    global p
-    global num
+def system() -> None:
+    """Функция приветсвия и выбора системы счисления"""
     print(
-        "Эта программа переводит числа из десятичной системы счисления",
+        "Эта программа переводит числа из десятичной системы счисления\n",
         "или переводит числа в десятичную систему счисления",
     )
     print("Выберите систему счисления из которой хотите перевести число")
-    p = input("Введите число: ")
+    p = input("Введите число:\n")
     while p.isdigit() == False:
         print("Введено должно быть число от 1 до 16!")
-        p = input("Введите число: ")
-    p = int(p)
+        p = input("Введите число:\n")
     if p != 10:
         print("Введенное число будет переведено в десятичную систему счисления")
         num = is_valid()
-        return create_other()
+        return create_other(num, int(p))
     else:
         print("Выберите систему счисления в которую хотите перевести число")
-        s = input("Введите число: ")
+        s = input("Введите число:\n")
         while s.isdigit() == False:
             print("Введено должно быть число от 1 до 16!")
-            s = input("Введите число: ")
-        s = int(s)
+            s = input("Введите число:\n")
         print(
             "Теперь необходимо ввести целое число, для его перевода в выбранную вами систему счисления"
         )
-        num = input("Введите число: ")
-        while num.isdigit() == False:
-            print("Необходимо ввести целое число!")
-            num = input("Введите число: ")
-        num = int(num)
-        return create_decimal()
+        num = is_valid()
+        return create_decimal(int(num), int(s))
 
 
-def is_valid():
-    num = [i for i in input("Введите число: ").upper() if i in lst]
+def is_valid() -> int:
+    num = [i for i in input("Введите число:\n").upper() if i in lst]
     return num
 
 
-# Функция перевода числа из десятичной системы
-# Возвращает результат
-def create_decimal():
-    global num
+def create_decimal(num: int, s: int) -> print:
+    """Функция перевода числа из десятичной системы"""
     total = ""
     while num != 0:
         x = num % s
@@ -61,9 +44,8 @@ def create_decimal():
     print(total)
 
 
-# Функция перевода числа в десятичную систему
-# Возвращает результат
-def create_other():
+def create_other(num: int, p: int) -> print:
+    """Функция перевода числа в десятичную систему"""
     total = 0
     for i in range(len(num)):
         x = lst.index(num[i]) * p ** (len(num) - i - 1)
