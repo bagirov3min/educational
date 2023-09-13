@@ -1,9 +1,13 @@
-# Educational programs
+# Mini utilities
+
+### Programs created by me during my learning and Python programming courses. 
 
 [English](README.md) | [Русский](README-ru.md)
 
-## Programs created by me during my learning and Python programming courses. 
-## You can integrate these programs as separate modules into a business project to expand functionality.
+
+## Application
+
+You can integrate these programs as separate modules into a business project to expand functionality.
 
 ### Caesar Cipher
 
