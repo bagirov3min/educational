@@ -70,3 +70,11 @@
 5. Запустите модуль "Генерация паролей":
     ```bash
     python generate_password.py
+   
+## Авторы
+
+Имя: Emin
+Фамилия: Bagirov
+GitHub: @bagirov3min (https://github.com/bagirov3min)
+Email: bagirov3min@gmail.com
+Telegram: @Emin_pro

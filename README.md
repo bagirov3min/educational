@@ -70,3 +70,11 @@ You can run the modules here:
 5. Run the "Password Generator" module:
     ```bash
     python generate_password.py
+
+## Authors
+
+Name: Emin
+Last Bagirov
+GitHub: @bagirov3min (https://github.com/bagirov3min)
+Email: bagirov3min@gmail.com
+Telegram: @Emin_pro
