@@ -73,8 +73,9 @@ You can run the modules here:
 
 ## Authors
 
-Имя: Emin <br>
-Фамилия: Bagirov <br>
+Name: Emin <br>
+Last: Bagirov <br>
 GitHub: [@bagirov3min](https://github.com/bagirov3min) <br>
 Email: bagirov3min@gmail.com <br>
 Telegram: @Emin_pro <br>
+
