@@ -5,7 +5,7 @@
 [English](README.md) | [Русский](README-ru.md)
 
 
-## Application
+## Usage
 
 You can integrate these programs as separate modules into a business project to expand functionality.
 
