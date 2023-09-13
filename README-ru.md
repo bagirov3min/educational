@@ -73,8 +73,8 @@
    
 ## Авторы
 
-Имя: Emin
-Фамилия: Bagirov
-GitHub: @bagirov3min (https://github.com/bagirov3min)
-Email: bagirov3min@gmail.com
-Telegram: @Emin_pro
+Name: Emin <br>
+Last: Bagirov <br>
+GitHub: [@bagirov3min](https://github.com/bagirov3min) <br>
+Email: bagirov3min@gmail.com <br>
+Telegram: @Emin_pro <br>

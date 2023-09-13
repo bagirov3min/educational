@@ -73,8 +73,8 @@ You can run the modules here:
 
 ## Authors
 
-Name: Emin
-Last Bagirov
-GitHub: @bagirov3min (https://github.com/bagirov3min)
-Email: bagirov3min@gmail.com
-Telegram: @Emin_pro
+Имя: Emin <br>
+Фамилия: Bagirov <br>
+GitHub: [@bagirov3min](https://github.com/bagirov3min) <br>
+Email: bagirov3min@gmail.com <br>
+Telegram: @Emin_pro <br>
